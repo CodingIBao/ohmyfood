@@ -1,0 +1,14 @@
+// Fichier principal qui importe tous les SASS
+
+@use "./base/reset";
+@use "./base/variables";
+@use "./base/mixins";
+@use "./components/cards";
+@use "./components/buttons";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./pages/index";
+@use "./pages/la-palette-du-gout";
+@use "./pages/le-delice-des-sens";
+@use "./pages/la-note-enchantee";
+@use "./pages/a-la-francaise";
