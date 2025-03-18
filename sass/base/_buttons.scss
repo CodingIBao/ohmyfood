@@ -1,0 +1,14 @@
+@use "../base/variables" as *;
+
+@mixin button-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  background: $color-green-light;
+  color: $color-green-dark;
+  padding: 6px 12px;
+}
