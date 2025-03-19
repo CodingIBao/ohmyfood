@@ -1,0 +1,27 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "OhMyFood 🍽️",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/main.scss:assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingIBao/ohmyfood.git"
+  },
+  "keywords": [],
+  "author": "codingIbao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingIBao/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/CodingIBao/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.86.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
