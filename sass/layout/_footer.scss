@@ -1,5 +1,6 @@
 @use "../base/variables" as *;
 
+
 footer ul {
   display: flex;
   flex-direction: column;
@@ -14,10 +15,11 @@ footer ul {
       height: 18px;
       margin-bottom: 9px;
       filter: invert(100%) brightness(100%) saturate(0%);
+      object-fit: contain;
+      width: unset;
     }
 
     p {
-      display: inline-block;
       margin: 0;
       padding: 0;
     }
