@@ -1,6 +1,8 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
+@use "../base/cards" as *;
 @use "../base/buttons" as *;
+
 
 .homepage {
   .restaurants{
@@ -19,31 +21,7 @@
     }
     
     .card {
-      background: $color-white;
-      border-radius: 20px;
-      margin: 5px 0;
-    
-      &-content {
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        
-        .card-txt {
-          @include df-column;
-          gap: 4px;
-        }
-        
-        .card-heart {
-          margin-top: 7px;
-          .fa-regular {
-            font-size: 22px;
-          }
-      
-          .fa-solid {
-            display: none;
-          }
-        }
-      }
+      @include img-card;
     
       img {
         height: 175px;

@@ -23,6 +23,7 @@ body img {
 header .homepage-logo img {
   height: 30px;
   object-fit: contain;
+  margin: 13px 0;
 }
 
 footer ul {
@@ -87,6 +88,20 @@ footer ul .footer-icon {
 }
 .homepage .restaurants .card-content .card-heart .fa-solid {
   display: none;
+}
+.homepage .restaurants .card img {
+  height: 175px;
+  border-radius: 15px 15px 0 0;
+}
+.homepage .restaurants .card #img1 {
+  object-position: center bottom;
+}
+.homepage .restaurants .card #img2 {
+  object-position: center 61%;
+}
+.homepage .restaurants .card #img4,
+.homepage .restaurants .card #img3 {
+  object-position: center bottom;
 }
 .homepage .restaurants .card img {
   height: 175px;

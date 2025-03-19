@@ -1,0 +1,49 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+
+@mixin img-card {
+  background: $color-white;
+  border-radius: 20px;
+  margin: 5px 0;
+
+  &-content {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+    .card-txt {
+      @include df-column;
+      gap: 4px;
+    }
+    
+    .card-heart {
+      margin-top: 7px;
+      .fa-regular {
+        font-size: 22px;
+      }
+  
+      .fa-solid {
+        display: none;
+      }
+    }
+  }
+
+  img {
+    height: 175px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  #img1 {
+    object-position: center bottom;
+  }
+
+  #img2 {
+    object-position: center 61%;
+  }
+
+  #img4,
+  #img3 {
+    object-position: center bottom;
+  }
+}  
