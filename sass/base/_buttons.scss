@@ -23,6 +23,7 @@
   color: $color_white;
   box-shadow: 0 4px 10px #00000040;
   font-size: 15px;
+  cursor: pointer;
 }
 
 @mixin btn_links_pages {
@@ -36,4 +37,5 @@
   font-weight: bold;
   font-size: 16px;
   box-shadow: 0 4px 15px #00000026;
+  cursor: pointer;
 }

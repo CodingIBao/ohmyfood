@@ -18,10 +18,10 @@ body img {
   display: block;
 }
 
-header .homepage-logo {
+header .header-logo {
   padding: 16px 0;
 }
-header .homepage-logo img {
+header .header-logo img {
   height: 30px;
   object-fit: contain;
 }
@@ -50,12 +50,12 @@ footer ul .footer-icon {
   gap: 12px;
 }
 
-.homepage header .homepage-logo {
+.homepage header .header-logo {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1490196078);
   position: relative;
   z-index: 3;
 }
-.homepage header .location {
+.homepage header .header-location {
   color: #353535;
   font-weight: 500;
   display: flex;
@@ -96,6 +96,7 @@ footer ul .footer-icon {
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
+  cursor: pointer;
 }
 .homepage .fonctionnement {
   padding: 46px 15px 67px 27px;
@@ -142,6 +143,7 @@ footer ul .footer-icon {
   font-weight: bold;
   font-size: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1490196078);
+  cursor: pointer;
 }
 .homepage .fonctionnement ul li button .fa-solid {
   font-size: 18px;
@@ -216,6 +218,30 @@ footer ul .footer-icon {
   background: #99E2D0;
   color: #353535;
   padding: 6px 12px;
+}
+
+.a-la-francaise header ul {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.a-la-francaise header ul li .back-button {
+  font-size: 20px;
+  color: #353535;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  left: 20px;
+}
+.a-la-francaise header ul li .header-img {
+  height: 275px;
+}
+.a-la-francaise .menu .menu-title {
+  display: flex;
+  justify-content: space-between;
+}
+.a-la-francaise .menu .menu-title h1 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

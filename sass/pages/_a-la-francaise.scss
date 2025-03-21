@@ -1,0 +1,39 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+@use "../base/cards" as *;
+@use "../base/buttons" as *;
+
+.a-la-francaise {
+  header {
+    ul {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      li {
+        .back-button {
+          font-size: 20px;
+          color: $color_secondary_dark;
+          position: absolute;
+          left: 0;
+          top: 18px;
+          left: 20px;
+        }
+        .header-img {
+          height: 275px;
+        }
+      }
+    }
+  }
+  .menu {
+    .menu-title {
+      display: flex;
+      justify-content: space-between;
+      h1 {
+        font-family: "Shrikhand", sans-serif;
+      }
+    }
+    .menu-content {
+
+    }
+  }
+}
