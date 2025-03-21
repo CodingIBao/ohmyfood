@@ -1,6 +1,7 @@
 @use "../base/variables" as *;
 
-@mixin button-badge {
+
+@mixin btn_badge {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -8,7 +9,18 @@
   font-size: 14px;
   border: none;
   border-radius: 2px;
-  background: $color-green-light;
-  color: $color-green-dark;
+  background: $color_secondary_light;
+  color: $color_secondary_dark;
   padding: 6px 12px;
+}
+
+@mixin cta_gradient_primary {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to top left,$color_gradient_button);
+  color: $color_white;
+  box-shadow: 0 4px 10px #00000040;
+  font-size: 15px;
 }

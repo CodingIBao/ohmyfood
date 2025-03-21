@@ -1,9 +1,11 @@
-$color-white: white;
-$color-background-grey-dark: #EAEAEA;
-$color-background-grey-light: #F6F6F6;
-$color-green-light: #99E2D0;
-$color-green: #008766;
-$color-green-dark: #353535;
-$color-primary: #9356DC;
-$color-primary-hover: #003A68;
-$color-gradient: #FF79DA;
+$color_white: white;
+$color_background_dark: #EAEAEA;
+$color_background_light: #F6F6F6;
+$color_secondary_light: #99E2D0;
+$color_secondary: #008766;
+$color_secondary_dark: #353535;
+$color_primary: #9356DC;
+$color_primary_dark: #003A68;
+$color_primary_light: #FF79DA;
+
+$color_gradient_button: ($color_primary, $color_primary_light);

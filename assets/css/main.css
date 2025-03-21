@@ -20,10 +20,12 @@ body img {
   display: block;
 }
 
+header .homepage-logo {
+  padding: 16px 0;
+}
 header .homepage-logo img {
   height: 30px;
   object-fit: contain;
-  margin: 13px 0;
 }
 
 footer ul {
@@ -50,8 +52,63 @@ footer ul .footer-icon {
   gap: 12px;
 }
 
-.homepage .location {
+.homepage header .homepage-logo {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
+  z-index: 3;
+}
+.homepage header .location {
+  color: #353535;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  padding: 15px;
   background: #EAEAEA;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2509803922);
+  position: relative;
+  z-index: 2;
+}
+.homepage .hero {
+  position: relative;
+  z-index: 1;
+  background: #F6F6F6;
+  padding: 38px 0px 56px 0;
+  text-align: center;
+}
+.homepage .hero ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.homepage .hero ul li h1 {
+  padding: 0 39px;
+}
+.homepage .hero ul li p {
+  font-size: 18px;
+  color: #353535;
+  font-weight: 300;
+}
+.homepage .hero ul li button {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
+  font-size: 15px;
+}
+.homepage .fonctionnement {
+  padding: 52px 0 67px 0;
+}
+.homepage .fonctionnement h2 {
+  margin-bottom: 34px;
+}
+.homepage .fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 .homepage .restaurants {
   background: #F6F6F6;

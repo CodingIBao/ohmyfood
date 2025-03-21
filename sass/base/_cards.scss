@@ -2,8 +2,8 @@
 @use "../base/variables" as *;
 
 
-@mixin img-card {
-  background: $color-white;
+@mixin img_card {
+  background: $color_white;
   border-radius: 20px;
   margin: 5px 0;
 
@@ -13,7 +13,7 @@
     justify-content: space-between;
     
     .card-txt {
-      @include df-column;
+      @include df_column;
       gap: 4px;
     }
     
