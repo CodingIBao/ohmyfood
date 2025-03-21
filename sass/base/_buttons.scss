@@ -24,3 +24,16 @@
   box-shadow: 0 4px 10px #00000040;
   font-size: 15px;
 }
+
+@mixin btn_links_pages {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 26px;
+  padding: 28px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 15px #00000026;
+}

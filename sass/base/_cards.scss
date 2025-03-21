@@ -6,29 +6,24 @@
   background: $color_white;
   border-radius: 20px;
   margin: 5px 0;
-
   &-content {
     padding: 15px;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
     .card-txt {
       @include df_column;
       gap: 4px;
     }
-    
     .card-heart {
       margin-top: 7px;
       .fa-regular {
         font-size: 22px;
       }
-  
       .fa-solid {
         display: none;
       }
     }
   }
-
   img {
     height: 175px;
     border-radius: 15px 15px 0 0;
