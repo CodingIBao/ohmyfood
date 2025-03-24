@@ -28,13 +28,18 @@
     position: relative;
     margin-top: -40px;
     background: $color_background_light;
-    padding: 12px;
+    padding: 34px 12px 12px 12px;
     border-radius: 40px 40px 0 0;
     .menu-title {
-      display: flex;
-      justify-content: space-between;
+      padding: 0 28px 0 0;
+      @include df_between;
+      align-items: center;
+      .fa-heart {
+        font-size: 22px;
+      }
       h1 {
-        margin-top: 12px;
+        font-weight: 400;
+        font-size: 28px;
         font-family: "Shrikhand", sans-serif;
       }
     }
@@ -42,6 +47,7 @@
       li {
         @include df_column; gap: 12px;
         h2 {
+          padding-bottom: 4px;
           margin-top: 42px;
           font-weight: 300;
           font-size: 16px;
@@ -49,32 +55,24 @@
           border-bottom: 3px solid $color_secondary_light;
           width: 40px;
         }
-        .menu-entrees {
+        .menu-entrees,
+        .menu-plats,
+        .menu-desserts {
           @include df_column;
           gap: 12px;
           .card-content {
-            @include df_between;
-            align-items: flex-end;
-            background: $color_white;
-            padding: 12px 15px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px #0000001A;
-            .card-txt {
-              @include df_column;
-              gap: 5px;
-              p {
-                font-size: 15px;
-                font-weight: 300;
-              }
-            }
-            .card-price {
-              p {
-                color: $color_secondary_dark;
-                font-weight: 700;
-              }
-            }
+            @include menu_card;
           }
         }
+      }
+    }
+    .menu-cta {
+      padding: 40px 0;
+      @include df_justify_center;
+      button {
+        @include cta_gradient_primary;
+        padding-right: 48px;
+        padding-left: 48px;
       }
     }
   }

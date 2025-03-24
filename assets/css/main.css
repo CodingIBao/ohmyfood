@@ -240,15 +240,21 @@ footer ul .footer-icon {
   position: relative;
   margin-top: -40px;
   background: #F6F6F6;
-  padding: 12px;
+  padding: 34px 12px 12px 12px;
   border-radius: 40px 40px 0 0;
 }
 .a-la-francaise .menu .menu-title {
+  padding: 0 28px 0 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.a-la-francaise .menu .menu-title .fa-heart {
+  font-size: 22px;
 }
 .a-la-francaise .menu .menu-title h1 {
-  margin-top: 12px;
+  font-weight: 400;
+  font-size: 28px;
   font-family: "Shrikhand", sans-serif;
 }
 .a-la-francaise .menu .menu-content li {
@@ -257,6 +263,7 @@ footer ul .footer-icon {
   gap: 12px;
 }
 .a-la-francaise .menu .menu-content li h2 {
+  padding-bottom: 4px;
   margin-top: 42px;
   font-weight: 300;
   font-size: 16px;
@@ -264,12 +271,16 @@ footer ul .footer-icon {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-.a-la-francaise .menu .menu-content li .menu-entrees {
+.a-la-francaise .menu .menu-content li .menu-entrees,
+.a-la-francaise .menu .menu-content li .menu-plats,
+.a-la-francaise .menu .menu-content li .menu-desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.a-la-francaise .menu .menu-content li .menu-entrees .card-content {
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content,
+.a-la-francaise .menu .menu-content li .menu-plats .card-content,
+.a-la-francaise .menu .menu-content li .menu-desserts .card-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -278,18 +289,41 @@ footer ul .footer-icon {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
 }
-.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-txt {
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-txt,
+.a-la-francaise .menu .menu-content li .menu-plats .card-content .card-txt,
+.a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-txt p {
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-txt p,
+.a-la-francaise .menu .menu-content li .menu-plats .card-content .card-txt p,
+.a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-txt p {
   font-size: 15px;
   font-weight: 300;
 }
-.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-price p {
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-price p,
+.a-la-francaise .menu .menu-content li .menu-plats .card-content .card-price p,
+.a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-price p {
   color: #353535;
   font-weight: 700;
+}
+.a-la-francaise .menu .menu-cta {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+.a-la-francaise .menu .menu-cta button {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
+  font-size: 15px;
+  cursor: pointer;
+  padding-right: 48px;
+  padding-left: 48px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -27,4 +27,27 @@
     height: 175px;
     border-radius: 15px 15px 0 0;
   }
-}  
+}
+
+@mixin menu_card {
+  @include df_between;
+  align-items: flex-end;
+  background: $color_white;
+  padding: 12px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #0000001A;
+  .card-txt {
+    @include df_column;
+    gap: 5px;
+    p {
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+  .card-price {
+    p {
+      color: $color_secondary_dark;
+      font-weight: 700;
+    }
+  }
+}
