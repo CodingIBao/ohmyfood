@@ -8,8 +8,7 @@
   margin: 5px 0;
   &-content {
     padding: 15px;
-    display: flex;
-    justify-content: space-between; 
+    @include df_between;
     .card-txt {
       @include df_column;
       gap: 4px;

@@ -60,13 +60,11 @@
       gap: 22px;
       li {
         position: relative;
-        display: flex;
-        align-items: center;
+        @include df_align_center;
         p {
           position: absolute;
           left: -12px;
-          display: flex;
-          align-items: center;
+          @include df_align_center;
           justify-content: center;
           padding: 12px;
           width: 24px;

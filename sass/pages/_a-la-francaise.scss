@@ -25,15 +25,57 @@
     }
   }
   .menu {
+    position: relative;
+    margin-top: -40px;
+    background: $color_background_light;
+    padding: 12px;
+    border-radius: 40px 40px 0 0;
     .menu-title {
       display: flex;
       justify-content: space-between;
       h1 {
+        margin-top: 12px;
         font-family: "Shrikhand", sans-serif;
       }
     }
     .menu-content {
-
+      li {
+        @include df_column; gap: 12px;
+        h2 {
+          margin-top: 42px;
+          font-weight: 300;
+          font-size: 16px;
+          text-transform: uppercase;
+          border-bottom: 3px solid $color_secondary_light;
+          width: 40px;
+        }
+        .menu-entrees {
+          @include df_column;
+          gap: 12px;
+          .card-content {
+            @include df_between;
+            align-items: flex-end;
+            background: $color_white;
+            padding: 12px 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #0000001A;
+            .card-txt {
+              @include df_column;
+              gap: 5px;
+              p {
+                font-size: 15px;
+                font-weight: 300;
+              }
+            }
+            .card-price {
+              p {
+                color: $color_secondary_dark;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

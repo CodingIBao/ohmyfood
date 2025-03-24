@@ -236,12 +236,60 @@ footer ul .footer-icon {
 .a-la-francaise header ul li .header-img {
   height: 275px;
 }
+.a-la-francaise .menu {
+  position: relative;
+  margin-top: -40px;
+  background: #F6F6F6;
+  padding: 12px;
+  border-radius: 40px 40px 0 0;
+}
 .a-la-francaise .menu .menu-title {
   display: flex;
   justify-content: space-between;
 }
 .a-la-francaise .menu .menu-title h1 {
+  margin-top: 12px;
   font-family: "Shrikhand", sans-serif;
+}
+.a-la-francaise .menu .menu-content li {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.a-la-francaise .menu .menu-content li h2 {
+  margin-top: 42px;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
+.a-la-francaise .menu .menu-content li .menu-entrees {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+}
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-txt p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.a-la-francaise .menu .menu-content li .menu-entrees .card-content .card-price p {
+  color: #353535;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */

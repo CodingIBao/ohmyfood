@@ -2,3 +2,13 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin df_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin df_align_center {
+  display: flex;
+  align-items: center;
+}
