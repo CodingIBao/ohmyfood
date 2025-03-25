@@ -16,10 +16,7 @@ footer ul {
       filter: invert(100%) brightness(100%) saturate(0%);
       object-fit: contain;
       width: unset;
-    }
-    p {
-      margin: 0;
-      padding: 0;
+      cursor: pointer;
     }
   }
   .footer-icon {
