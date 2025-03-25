@@ -89,11 +89,15 @@ footer ul .footer-icon {
   padding: 16px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
+}
+.homepage .hero ul li button:hover {
+  background: linear-gradient(to top, rgb(174, 128.25, 228.75), rgb(255, 172, 232.0820895522));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3490196078);
 }
 .homepage .fonctionnement {
   padding: 46px 15px 67px 27px;
@@ -180,12 +184,28 @@ footer ul .footer-icon {
 }
 .homepage .restaurants .card-content .card-heart {
   margin-top: 7px;
+  position: relative;
 }
-.homepage .restaurants .card-content .card-heart .fa-regular {
+.homepage .restaurants .card-content .card-heart .fa-regular,
+.homepage .restaurants .card-content .card-heart .fa-solid {
+  cursor: pointer;
   font-size: 22px;
+  transition: opacity 0.3s ease;
 }
 .homepage .restaurants .card-content .card-heart .fa-solid {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.homepage .restaurants .card-content .card-heart:hover .fa-solid {
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.homepage .restaurants .card-content .card-heart:hover .fa-regular {
+  opacity: 0;
 }
 .homepage .restaurants .card img {
   height: 175px;
@@ -230,7 +250,7 @@ footer ul .footer-icon {
   top: 18px;
   left: 20px;
 }
-.la-palette-du-gout header ul li .header-img {
+.la-palette-du-gout header .header-img {
   height: 275px;
 }
 .la-palette-du-gout .menu {
@@ -246,8 +266,29 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: center;
 }
-.la-palette-du-gout .menu .menu-title .fa-heart {
+.la-palette-du-gout .menu .menu-title .card-heart {
+  position: relative;
+}
+.la-palette-du-gout .menu .menu-title .card-heart .fa-regular,
+.la-palette-du-gout .menu .menu-title .card-heart .fa-solid {
+  cursor: pointer;
   font-size: 22px;
+  transition: opacity 0.3s ease;
+}
+.la-palette-du-gout .menu .menu-title .card-heart .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.la-palette-du-gout .menu .menu-title .card-heart:hover .fa-solid {
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.la-palette-du-gout .menu .menu-title .card-heart:hover .fa-regular {
+  opacity: 0;
 }
 .la-palette-du-gout .menu .menu-title h1 {
   font-weight: 400;
@@ -314,13 +355,17 @@ footer ul .footer-icon {
   padding: 16px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
   padding-right: 48px;
   padding-left: 48px;
+}
+.la-palette-du-gout .menu .menu-cta button:hover {
+  background: linear-gradient(to top, rgb(174, 128.25, 228.75), rgb(255, 172, 232.0820895522));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3490196078);
 }
 
 .le-delice-des-sens header ul {
@@ -336,7 +381,7 @@ footer ul .footer-icon {
   top: 18px;
   left: 20px;
 }
-.le-delice-des-sens header ul li .header-img {
+.le-delice-des-sens header .header-img {
   height: 275px;
 }
 .le-delice-des-sens .menu {
@@ -352,8 +397,29 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: center;
 }
-.le-delice-des-sens .menu .menu-title .fa-heart {
+.le-delice-des-sens .menu .menu-title .card-heart {
+  position: relative;
+}
+.le-delice-des-sens .menu .menu-title .card-heart .fa-regular,
+.le-delice-des-sens .menu .menu-title .card-heart .fa-solid {
+  cursor: pointer;
   font-size: 22px;
+  transition: opacity 0.3s ease;
+}
+.le-delice-des-sens .menu .menu-title .card-heart .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.le-delice-des-sens .menu .menu-title .card-heart:hover .fa-solid {
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.le-delice-des-sens .menu .menu-title .card-heart:hover .fa-regular {
+  opacity: 0;
 }
 .le-delice-des-sens .menu .menu-title h1 {
   font-weight: 400;
@@ -420,13 +486,17 @@ footer ul .footer-icon {
   padding: 16px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
   padding-right: 48px;
   padding-left: 48px;
+}
+.le-delice-des-sens .menu .menu-cta button:hover {
+  background: linear-gradient(to top, rgb(174, 128.25, 228.75), rgb(255, 172, 232.0820895522));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3490196078);
 }
 
 .la-note-enchantee header ul {
@@ -442,7 +512,7 @@ footer ul .footer-icon {
   top: 18px;
   left: 20px;
 }
-.la-note-enchantee header ul li .header-img {
+.la-note-enchantee header .header-img {
   height: 275px;
 }
 .la-note-enchantee .menu {
@@ -458,8 +528,29 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: center;
 }
-.la-note-enchantee .menu .menu-title .fa-heart {
+.la-note-enchantee .menu .menu-title .card-heart {
+  position: relative;
+}
+.la-note-enchantee .menu .menu-title .card-heart .fa-regular,
+.la-note-enchantee .menu .menu-title .card-heart .fa-solid {
+  cursor: pointer;
   font-size: 22px;
+  transition: opacity 0.3s ease;
+}
+.la-note-enchantee .menu .menu-title .card-heart .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.la-note-enchantee .menu .menu-title .card-heart:hover .fa-solid {
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.la-note-enchantee .menu .menu-title .card-heart:hover .fa-regular {
+  opacity: 0;
 }
 .la-note-enchantee .menu .menu-title h1 {
   font-weight: 400;
@@ -526,13 +617,17 @@ footer ul .footer-icon {
   padding: 16px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
   padding-right: 48px;
   padding-left: 48px;
+}
+.la-note-enchantee .menu .menu-cta button:hover {
+  background: linear-gradient(to top, rgb(174, 128.25, 228.75), rgb(255, 172, 232.0820895522));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3490196078);
 }
 
 .a-la-francaise header ul {
@@ -548,7 +643,7 @@ footer ul .footer-icon {
   top: 18px;
   left: 20px;
 }
-.a-la-francaise header ul li .header-img {
+.a-la-francaise header .header-img {
   height: 275px;
 }
 .a-la-francaise .menu {
@@ -564,8 +659,29 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: center;
 }
-.a-la-francaise .menu .menu-title .fa-heart {
+.a-la-francaise .menu .menu-title .card-heart {
+  position: relative;
+}
+.a-la-francaise .menu .menu-title .card-heart .fa-regular,
+.a-la-francaise .menu .menu-title .card-heart .fa-solid {
+  cursor: pointer;
   font-size: 22px;
+  transition: opacity 0.3s ease;
+}
+.a-la-francaise .menu .menu-title .card-heart .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.a-la-francaise .menu .menu-title .card-heart:hover .fa-solid {
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.a-la-francaise .menu .menu-title .card-heart:hover .fa-regular {
+  opacity: 0;
 }
 .a-la-francaise .menu .menu-title h1 {
   font-weight: 400;
@@ -632,13 +748,17 @@ footer ul .footer-icon {
   padding: 16px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
   padding-right: 48px;
   padding-left: 48px;
+}
+.a-la-francaise .menu .menu-cta button:hover {
+  background: linear-gradient(to top, rgb(174, 128.25, 228.75), rgb(255, 172, 232.0820895522));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3490196078);
 }
 
 /*# sourceMappingURL=main.css.map */

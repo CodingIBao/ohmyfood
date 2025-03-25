@@ -1,5 +1,7 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
+@use 'sass:list';
+@use 'sass:color';
 
 
 @mixin btn_badge {
@@ -19,11 +21,20 @@
   padding: 16px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(to top left,$color_gradient_button);
+  background: linear-gradient(to top ,$color_gradient_button);
   color: $color_white;
   box-shadow: 0 4px 10px #00000040;
   font-size: 15px;
   cursor: pointer;
+}
+
+@mixin cta_gradient_hover {
+  background: linear-gradient(
+    to top,
+    color.adjust($color_primary, $lightness: 10%),
+    color.adjust($color_primary_light, $lightness: 10%)
+  );
+  box-shadow: 0 4px 15px #00000059;
 }
 
 @mixin btn_links_pages {
@@ -47,5 +58,35 @@
     @include cta_gradient_primary;
     padding-right: 48px;
     padding-left: 48px;
+    &:hover {
+      @include cta_gradient_hover;
+    }
+  }
+}
+
+@mixin heart_button {
+  position: relative;
+  .fa-regular,
+  .fa-solid {
+    cursor: pointer;
+    font-size: 22px;
+    transition: opacity 0.3s ease;
+  }
+  .fa-solid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  &:hover {
+    .fa-solid {
+      opacity: 1;
+      background: linear-gradient(to bottom, list.nth($color_gradient_button, 1), list.nth($color_gradient_button, 2));          
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .fa-regular {
+      opacity: 0;
+    }
   }
 }

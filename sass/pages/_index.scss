@@ -46,6 +46,9 @@
         button {
           margin-top: 18px;
           @include cta_gradient_primary;
+          &:hover {
+            @include cta_gradient_hover;
+          }  
         }
       }
     }

@@ -1,5 +1,6 @@
 @use "../base/mixins" as *;
 @use "../base/variables" as *;
+@use "../base/buttons" as *;
 
 
 @mixin img_card {
@@ -15,12 +16,7 @@
     }
     .card-heart {
       margin-top: 7px;
-      .fa-regular {
-        font-size: 22px;
-      }
-      .fa-solid {
-        display: none;
-      }
+      @include heart_button;
     }
   }
   img {

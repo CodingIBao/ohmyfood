@@ -14,8 +14,8 @@
     padding: 0 28px 0 0;
     @include df_between;
     align-items: center;
-    .fa-heart {
-      font-size: 22px;
+    .card-heart {
+      @include heart_button;
     }
     h1 {
       font-weight: 400;
