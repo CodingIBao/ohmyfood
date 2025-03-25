@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 
 @mixin btn_badge {
@@ -37,4 +38,14 @@
   font-size: 16px;
   box-shadow: 0 4px 15px #00000026;
   cursor: pointer;
+}
+
+@mixin cta_menu_gradient {
+  padding: 40px 0;
+  @include df_justify_center;
+  button {
+    @include cta_gradient_primary;
+    padding-right: 48px;
+    padding-left: 48px;
+  }
 }

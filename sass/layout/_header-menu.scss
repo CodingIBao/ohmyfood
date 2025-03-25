@@ -1,0 +1,22 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+@mixin header_menu {
+  ul {
+    @include df_justify_center;
+    position: relative;
+    li {
+      .back-button {
+        font-size: 20px;
+        color: $color_secondary_dark;
+        position: absolute;
+        left: 0;
+        top: 18px;
+        left: 20px;
+      }
+      .header-img {
+        height: 275px;
+      }
+    }
+  }
+}

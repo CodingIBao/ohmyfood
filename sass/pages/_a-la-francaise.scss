@@ -1,79 +1,12 @@
-@use "../base/variables" as *;
-@use "../base/mixins" as *;
-@use "../base/cards" as *;
-@use "../base/buttons" as *;
+@use "../layout/header-menu" as *;
+@use "../layout/main-menu" as *;
+
 
 .a-la-francaise {
   header {
-    ul {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      li {
-        .back-button {
-          font-size: 20px;
-          color: $color_secondary_dark;
-          position: absolute;
-          left: 0;
-          top: 18px;
-          left: 20px;
-        }
-        .header-img {
-          height: 275px;
-        }
-      }
-    }
+    @include header_menu;
   }
   .menu {
-    position: relative;
-    margin-top: -40px;
-    background: $color_background_light;
-    padding: 34px 12px 12px 12px;
-    border-radius: 40px 40px 0 0;
-    .menu-title {
-      padding: 0 28px 0 0;
-      @include df_between;
-      align-items: center;
-      .fa-heart {
-        font-size: 22px;
-      }
-      h1 {
-        font-weight: 400;
-        font-size: 28px;
-        font-family: "Shrikhand", sans-serif;
-      }
-    }
-    .menu-content {
-      li {
-        @include df_column; gap: 12px;
-        h2 {
-          padding-bottom: 4px;
-          margin-top: 42px;
-          font-weight: 300;
-          font-size: 16px;
-          text-transform: uppercase;
-          border-bottom: 3px solid $color_secondary_light;
-          width: 40px;
-        }
-        .menu-entrees,
-        .menu-plats,
-        .menu-desserts {
-          @include df_column;
-          gap: 12px;
-          .card-content {
-            @include menu_card;
-          }
-        }
-      }
-    }
-    .menu-cta {
-      padding: 40px 0;
-      @include df_justify_center;
-      button {
-        @include cta_gradient_primary;
-        padding-right: 48px;
-        padding-left: 48px;
-      }
-    }
+    @include main_menu;
   }
 }

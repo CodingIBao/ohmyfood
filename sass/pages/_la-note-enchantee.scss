@@ -1,0 +1,12 @@
+@use "../layout/header-menu" as *;
+@use "../layout/main-menu" as *;
+
+
+.la-note-enchantee {
+  header {
+    @include header_menu;
+  }
+  .menu {
+    @include main_menu;
+  }
+}
