@@ -94,6 +94,7 @@ footer ul .footer-icon {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .homepage .hero ul li button:hover {
   background: linear-gradient(to top, rgb(174, 128.25, 228.75), rgb(255, 172, 232.0820895522));
@@ -360,6 +361,7 @@ footer ul .footer-icon {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   padding-right: 48px;
   padding-left: 48px;
 }
@@ -491,6 +493,7 @@ footer ul .footer-icon {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   padding-right: 48px;
   padding-left: 48px;
 }
@@ -622,6 +625,7 @@ footer ul .footer-icon {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   padding-right: 48px;
   padding-left: 48px;
 }
@@ -753,6 +757,7 @@ footer ul .footer-icon {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
   font-size: 15px;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   padding-right: 48px;
   padding-left: 48px;
 }
