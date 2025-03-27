@@ -184,8 +184,8 @@ footer ul .footer-icon {
   gap: 4px;
 }
 .homepage .restaurants .card-content .card-heart {
-  margin-top: 7px;
   position: relative;
+  margin-top: 7px;
 }
 .homepage .restaurants .card-content .card-heart .fa-regular,
 .homepage .restaurants .card-content .card-heart .fa-solid {
@@ -326,9 +326,10 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: flex-end;
   background: white;
-  padding: 12px 15px;
+  padding: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
 }
 .la-palette-du-gout .menu .menu-content li .menu-appetizers .card-content .card-txt,
 .la-palette-du-gout .menu .menu-content li .menu-mains .card-content .card-txt,
@@ -336,18 +337,37 @@ footer ul .footer-icon {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers .card-content .card-txt h3,
+.la-palette-du-gout .menu .menu-content li .menu-mains .card-content .card-txt h3,
+.la-palette-du-gout .menu .menu-content li .menu-desserts .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
 }
 .la-palette-du-gout .menu .menu-content li .menu-appetizers .card-content .card-txt p,
 .la-palette-du-gout .menu .menu-content li .menu-mains .card-content .card-txt p,
 .la-palette-du-gout .menu .menu-content li .menu-desserts .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 15px;
   font-weight: 300;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers .card-content .card-price,
+.la-palette-du-gout .menu .menu-content li .menu-mains .card-content .card-price,
+.la-palette-du-gout .menu .menu-content li .menu-desserts .card-content .card-price {
+  justify-content: flex-end;
 }
 .la-palette-du-gout .menu .menu-content li .menu-appetizers .card-content .card-price p,
 .la-palette-du-gout .menu .menu-content li .menu-mains .card-content .card-price p,
 .la-palette-du-gout .menu .menu-content li .menu-desserts .card-content .card-price p {
   color: #353535;
   font-weight: 700;
+  white-space: nowrap;
 }
 .la-palette-du-gout .menu .menu-cta {
   padding: 40px 0;
@@ -459,9 +479,10 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: flex-end;
   background: white;
-  padding: 12px 15px;
+  padding: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
 }
 .le-delice-des-sens .menu .menu-content li .menu-appetizers .card-content .card-txt,
 .le-delice-des-sens .menu .menu-content li .menu-mains .card-content .card-txt,
@@ -469,18 +490,37 @@ footer ul .footer-icon {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers .card-content .card-txt h3,
+.le-delice-des-sens .menu .menu-content li .menu-mains .card-content .card-txt h3,
+.le-delice-des-sens .menu .menu-content li .menu-desserts .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
 }
 .le-delice-des-sens .menu .menu-content li .menu-appetizers .card-content .card-txt p,
 .le-delice-des-sens .menu .menu-content li .menu-mains .card-content .card-txt p,
 .le-delice-des-sens .menu .menu-content li .menu-desserts .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 15px;
   font-weight: 300;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers .card-content .card-price,
+.le-delice-des-sens .menu .menu-content li .menu-mains .card-content .card-price,
+.le-delice-des-sens .menu .menu-content li .menu-desserts .card-content .card-price {
+  justify-content: flex-end;
 }
 .le-delice-des-sens .menu .menu-content li .menu-appetizers .card-content .card-price p,
 .le-delice-des-sens .menu .menu-content li .menu-mains .card-content .card-price p,
 .le-delice-des-sens .menu .menu-content li .menu-desserts .card-content .card-price p {
   color: #353535;
   font-weight: 700;
+  white-space: nowrap;
 }
 .le-delice-des-sens .menu .menu-cta {
   padding: 40px 0;
@@ -592,9 +632,10 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: flex-end;
   background: white;
-  padding: 12px 15px;
+  padding: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
 }
 .la-note-enchantee .menu .menu-content li .menu-appetizers .card-content .card-txt,
 .la-note-enchantee .menu .menu-content li .menu-mains .card-content .card-txt,
@@ -602,18 +643,37 @@ footer ul .footer-icon {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers .card-content .card-txt h3,
+.la-note-enchantee .menu .menu-content li .menu-mains .card-content .card-txt h3,
+.la-note-enchantee .menu .menu-content li .menu-desserts .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
 }
 .la-note-enchantee .menu .menu-content li .menu-appetizers .card-content .card-txt p,
 .la-note-enchantee .menu .menu-content li .menu-mains .card-content .card-txt p,
 .la-note-enchantee .menu .menu-content li .menu-desserts .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 15px;
   font-weight: 300;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers .card-content .card-price,
+.la-note-enchantee .menu .menu-content li .menu-mains .card-content .card-price,
+.la-note-enchantee .menu .menu-content li .menu-desserts .card-content .card-price {
+  justify-content: flex-end;
 }
 .la-note-enchantee .menu .menu-content li .menu-appetizers .card-content .card-price p,
 .la-note-enchantee .menu .menu-content li .menu-mains .card-content .card-price p,
 .la-note-enchantee .menu .menu-content li .menu-desserts .card-content .card-price p {
   color: #353535;
   font-weight: 700;
+  white-space: nowrap;
 }
 .la-note-enchantee .menu .menu-cta {
   padding: 40px 0;
@@ -725,9 +785,10 @@ footer ul .footer-icon {
   justify-content: space-between;
   align-items: flex-end;
   background: white;
-  padding: 12px 15px;
+  padding: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
 }
 .a-la-francaise .menu .menu-content li .menu-appetizers .card-content .card-txt,
 .a-la-francaise .menu .menu-content li .menu-mains .card-content .card-txt,
@@ -735,18 +796,37 @@ footer ul .footer-icon {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  min-width: 0;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers .card-content .card-txt h3,
+.a-la-francaise .menu .menu-content li .menu-mains .card-content .card-txt h3,
+.a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
 }
 .a-la-francaise .menu .menu-content li .menu-appetizers .card-content .card-txt p,
 .a-la-francaise .menu .menu-content li .menu-mains .card-content .card-txt p,
 .a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 15px;
   font-weight: 300;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers .card-content .card-price,
+.a-la-francaise .menu .menu-content li .menu-mains .card-content .card-price,
+.a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-price {
+  justify-content: flex-end;
 }
 .a-la-francaise .menu .menu-content li .menu-appetizers .card-content .card-price p,
 .a-la-francaise .menu .menu-content li .menu-mains .card-content .card-price p,
 .a-la-francaise .menu .menu-content li .menu-desserts .card-content .card-price p {
   color: #353535;
   font-weight: 700;
+  white-space: nowrap;
 }
 .a-la-francaise .menu .menu-cta {
   padding: 40px 0;

@@ -16,8 +16,8 @@
       gap: 4px;
     }
     .card-heart {
-      margin-top: 7px;
       @include heart_button;
+      margin-top: 7px;
     }
   }
   img {
@@ -31,21 +31,31 @@
   @include df_between;
   align-items: flex-end;
   background: $color_white;
-  padding: 12px 15px;
+  padding: 12px;
   border-radius: 15px;
   box-shadow: 0 4px 15px #0000001A;
+  cursor: pointer;
   .card-txt {
     @include df_column;
     gap: 5px;
+    min-width: 0;
+    h3 {
+      @include txt-ellipsis;
+      font-size: 18px;
+      font-weight: 500;
+    }
     p {
+      @include txt-ellipsis;
       font-size: 15px;
       font-weight: 300;
     }
   }
   .card-price {
+    justify-content: flex-end;
     p {
       color: $color_secondary_dark;
       font-weight: 700;
+      white-space: nowrap;
     }
   }
 }

@@ -18,3 +18,9 @@
   display: flex;
   justify-content: center;
 }
+
+@mixin txt-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
