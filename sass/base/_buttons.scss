@@ -42,7 +42,8 @@
   &:hover {
     .fa-solid {
       opacity: 1;
-      background: linear-gradient(to bottom, list.nth($color_gradient_button, 1), list.nth($color_gradient_button, 2));          
+      background: linear-gradient(to bottom, list.nth($color_gradient_button, 1), list.nth($color_gradient_button, 2));
+      background-clip: text;        
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
