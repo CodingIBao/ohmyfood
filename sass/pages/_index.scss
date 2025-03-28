@@ -87,8 +87,15 @@
           .fa-solid {
             font-size: 18px;
           }
+          .fa-solid{
+            transition: color 0.3s ease;
+          }
+          .fa-mobile-screen-button,
+          .fa-list-ul,
           .fa-store {
-            color: $color_primary;
+            &:hover {
+              color: $color_primary;
+            }
           }
         }
       }
