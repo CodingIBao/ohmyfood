@@ -27,6 +27,8 @@
 
 @mixin heart_button {
   position: relative;
+  width: 22px;
+  height: 22px;
   .fa-regular,
   .fa-solid {
     cursor: pointer;

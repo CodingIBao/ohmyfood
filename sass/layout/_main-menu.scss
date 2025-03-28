@@ -38,11 +38,14 @@
       .menu-appetizers,
       .menu-mains,
       .menu-desserts {
-        @include df_column;
-        gap: 12px;
-        .card-content {
-          @include menu_card;
-        }
+          @include df_column;
+          gap: 12px;
+          li {
+            @include menu_card;
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+          }
       }
     }
   }
