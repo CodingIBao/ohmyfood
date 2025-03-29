@@ -149,13 +149,11 @@ footer ul .footer-icon {
 }
 .homepage .fonctionnement ul li button .fa-solid {
   font-size: 18px;
-}
-.homepage .fonctionnement ul li button .fa-solid {
   transition: color 0.3s ease;
 }
-.homepage .fonctionnement ul li button .fa-mobile-screen-button:hover,
-.homepage .fonctionnement ul li button .fa-list-ul:hover,
-.homepage .fonctionnement ul li button .fa-store:hover {
+.homepage .fonctionnement ul li button:hover .fa-mobile-screen-button,
+.homepage .fonctionnement ul li button:hover .fa-list-ul,
+.homepage .fonctionnement ul li button:hover .fa-store {
   color: #9356DC;
 }
 .homepage .restaurants {

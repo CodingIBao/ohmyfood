@@ -86,17 +86,15 @@
           @include btn_links_pages;
           .fa-solid {
             font-size: 18px;
-          }
-          .fa-solid{
             transition: color 0.3s ease;
           }
+        &:hover {
           .fa-mobile-screen-button,
           .fa-list-ul,
           .fa-store {
-            &:hover {
-              color: $color_primary;
-            }
+          color: $color_primary;
           }
+        }
         }
       }
     }
