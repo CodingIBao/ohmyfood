@@ -1,13 +1,25 @@
 // Fichier principal qui importe tous les SASS
 
+
+// Abstracts
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+
+// Base
 @use "./base/reset";
-@use "./base/variables";
-@use "./base/mixins";
-@use "./base/buttons";
-@use "./base/cards";
+
+// Components
+@use "./components/buttons";
+@use "./components/cards";
+@use "./components/loader";
+
+// Layout
+@use "./layout/body";
 @use "./layout/header";
-@use "./layout/main-menu";
+@use "./layout/main-restaurants";
 @use "./layout/footer";
+
+// Pages
 @use "./pages/index";
 @use "./pages/la-palette-du-gout";
 @use "./pages/le-delice-des-sens";

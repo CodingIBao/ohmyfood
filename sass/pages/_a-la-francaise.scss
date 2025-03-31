@@ -1,8 +1,10 @@
+@use "../components/loader" as *;
 @use "../layout/header" as *;
-@use "../layout/main-menu" as *;
+@use "../layout/main-restaurants" as *;
 
 
 .a-la-francaise {
+  @include loader;
   header {
     @include header_menu;
   }

@@ -1,6 +1,6 @@
-@use "../base/mixins" as *;
-@use "../base/variables" as *;
-@use "../base/buttons" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../components/buttons" as *;
 
 
 // mixin only for index page
@@ -28,6 +28,10 @@
 
 // mixin only for restaurant pages
 @mixin menu_card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
   .card-content {
     width: 100%;
     @include df_between;
