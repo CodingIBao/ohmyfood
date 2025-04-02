@@ -4,7 +4,6 @@
 
 
 .la-palette-du-gout {
-  @include loader;
   header {
     @include header_menu;
   }

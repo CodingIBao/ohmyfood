@@ -2,9 +2,11 @@
 @use "../abstracts/mixins" as *;
 @use "../components/cards" as *;
 @use "../components/buttons" as *;
+@use "../components/loader" as *;
 
 
 .homepage {
+  @include loader;
   header {
     .header-logo {
       box-shadow: 0 2px 4px #00000026;
@@ -24,7 +26,6 @@
       z-index: 2;
     }
   }
-
   .hero {
     position: relative;
     z-index: 1;
@@ -53,7 +54,6 @@
       }
     }
   }
-
   .fonctionnement {
     padding: 46px 15px 67px 27px;
     h2 {
@@ -99,7 +99,6 @@
       }
     }
   }
-
   .restaurants{
     background: $color_background_light;
     padding: 50px 15px 60px 15px;
