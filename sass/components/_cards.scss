@@ -28,65 +28,69 @@
 
 // mixin only for restaurant pages
 @mixin menu_card {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  .card-content {
-    width: 100%;
-    @include df_between;
-    background: $color_white;
-    padding: 12px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px #0000001A;
-    cursor: pointer;
-    .card-txt {
-      @include df_column;
-      gap: 5px;
-      min-width: 0;
-      h3 {
-        @include txt-ellipsis;
-        font-size: 18px;
-        font-weight: 500;
+  @include df_column;
+  gap: 12px;
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    .card-content {
+      width: 100%;
+      @include df_between;
+      background: $color_white;
+      padding: 12px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px #0000001A;
+      cursor: pointer;
+      .card-txt {
+        @include df_column;
+        gap: 5px;
+        min-width: 0;
+        h3 {
+          @include txt-ellipsis;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        p {
+          @include txt-ellipsis;
+          font-size: 15px;
+          font-weight: 300;
+        }
       }
-      p {
-        @include txt-ellipsis;
-        font-size: 15px;
-        font-weight: 300;
+      .card-price {
+        display: flex;
+        transition: all 0.3s ease-in-out;
+        p {
+          align-self: flex-end;
+          color: $color_secondary_dark;
+          font-weight: 700;
+          white-space: nowrap;
+        }
       }
     }
-    .card-price {
-      display: flex;
+    &:hover .card-price {
+      padding-right: 58px;
+    }
+    .check-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include df_align_center;
+      background-color: $color_secondary_light;
+      color: $color_white;
+      height: 100%;
+      font-size: 20px;
+      border-radius: 0 15px 15px 0;
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
       transition: all 0.3s ease-in-out;
-      p {
-        align-self: flex-end;
-        color: $color_secondary_dark;
-        font-weight: 700;
-        white-space: nowrap;
-      }
     }
-  }
-  &:hover .card-price {
-    padding-right: 58px;
-  }
-  .check-icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    @include df_align_center;
-    background-color: $color_secondary_light;
-    color: $color_white;
-    height: 100%;
-    font-size: 20px;
-    border-radius: 0 15px 15px 0;
-    opacity: 0;
-    width: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-  .card-content:hover .check-icon {
-    width: 58px;
-    opacity: 1;
-    padding: 0 19px;
+    .card-content:hover .check-icon {
+      width: 58px;
+      opacity: 1;
+      padding: 0 19px;
+    }
   }
 }

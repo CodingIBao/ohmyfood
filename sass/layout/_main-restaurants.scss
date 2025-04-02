@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as *;
 @use "../components/cards" as *;
 @use "../components/buttons" as *;
+@use "../components/animations" as *;
 
 
 @mixin main_menu {
@@ -35,14 +36,17 @@
         border-bottom: 3px solid $color_secondary_light;
         width: 40px;
       }
-      .menu-appetizers,
-      .menu-mains,
+      .menu-appetizers {
+        @include menu_card;
+        @include fade_in_step(0.4s);
+      }
+      .menu-mains {
+        @include menu_card;
+        @include fade_in_step(1.2s);
+      }
       .menu-desserts {
-          @include df_column;
-          gap: 12px;
-          li {
-            @include menu_card;
-          }
+        @include menu_card;
+        @include fade_in_step(2s);
       }
     }
   }

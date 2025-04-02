@@ -5,6 +5,16 @@
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body a {
   color: inherit;
   text-decoration: none;
@@ -56,7 +66,8 @@ footer ul .footer-icon {
   background: white;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-direction: column-reverse;
+  gap: 30px;
   align-items: center;
   z-index: 9999;
   animation: fadeOut 1s ease forwards;
@@ -69,6 +80,9 @@ footer ul .footer-icon {
   border-top-color: #99E2D0;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+.homepage .loader .ohmyfood {
+  animation: blink 1.2s ease-in-out infinite;
 }
 .homepage .page-content {
   opacity: 0;
@@ -84,6 +98,14 @@ footer ul .footer-icon {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 @keyframes showPage {
@@ -363,23 +385,176 @@ footer ul .footer-icon {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers,
-.la-palette-du-gout .menu .menu-content li .menu-mains,
+.la-palette-du-gout .menu .menu-content li .menu-appetizers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li:hover .card-price {
+  padding-right: 58px;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li:hover .card-price {
+  padding-right: 58px;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
 .la-palette-du-gout .menu .menu-content li .menu-desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 2s;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li,
-.la-palette-du-gout .menu .menu-content li .menu-mains li,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li {
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 0;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content {
   width: 100%;
   display: flex;
@@ -390,16 +565,12 @@ footer ul .footer-icon {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-txt,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-txt,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   min-width: 0;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-txt h3,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-txt h3,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content .card-txt h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -407,8 +578,6 @@ footer ul .footer-icon {
   font-size: 18px;
   font-weight: 500;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-txt p,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-txt p,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content .card-txt p {
   white-space: nowrap;
   overflow: hidden;
@@ -416,27 +585,19 @@ footer ul .footer-icon {
   font-size: 15px;
   font-weight: 300;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-price,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-price,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content .card-price {
   display: flex;
   transition: all 0.3s ease-in-out;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content .card-price p,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content .card-price p,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content .card-price p {
   align-self: flex-end;
   color: #353535;
   font-weight: 700;
   white-space: nowrap;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li:hover .card-price,
-.la-palette-du-gout .menu .menu-content li .menu-mains li:hover .card-price,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li:hover .card-price {
   padding-right: 58px;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .check-icon,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .check-icon,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .check-icon {
   position: absolute;
   top: 0;
@@ -453,8 +614,6 @@ footer ul .footer-icon {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
-.la-palette-du-gout .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon,
-.la-palette-du-gout .menu .menu-content li .menu-mains li .card-content:hover .check-icon,
 .la-palette-du-gout .menu .menu-content li .menu-desserts li .card-content:hover .check-icon {
   width: 58px;
   opacity: 1;
@@ -558,23 +717,176 @@ footer ul .footer-icon {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers,
-.le-delice-des-sens .menu .menu-content li .menu-mains,
+.le-delice-des-sens .menu .menu-content li .menu-appetizers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li:hover .card-price {
+  padding-right: 58px;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li:hover .card-price {
+  padding-right: 58px;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
 .le-delice-des-sens .menu .menu-content li .menu-desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 2s;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li,
-.le-delice-des-sens .menu .menu-content li .menu-mains li,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li {
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 0;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content {
   width: 100%;
   display: flex;
@@ -585,16 +897,12 @@ footer ul .footer-icon {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-txt,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-txt,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   min-width: 0;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-txt h3,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-txt h3,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content .card-txt h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -602,8 +910,6 @@ footer ul .footer-icon {
   font-size: 18px;
   font-weight: 500;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-txt p,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-txt p,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content .card-txt p {
   white-space: nowrap;
   overflow: hidden;
@@ -611,27 +917,19 @@ footer ul .footer-icon {
   font-size: 15px;
   font-weight: 300;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-price,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-price,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content .card-price {
   display: flex;
   transition: all 0.3s ease-in-out;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content .card-price p,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content .card-price p,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content .card-price p {
   align-self: flex-end;
   color: #353535;
   font-weight: 700;
   white-space: nowrap;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li:hover .card-price,
-.le-delice-des-sens .menu .menu-content li .menu-mains li:hover .card-price,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li:hover .card-price {
   padding-right: 58px;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .check-icon,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .check-icon,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .check-icon {
   position: absolute;
   top: 0;
@@ -648,8 +946,6 @@ footer ul .footer-icon {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
-.le-delice-des-sens .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon,
-.le-delice-des-sens .menu .menu-content li .menu-mains li .card-content:hover .check-icon,
 .le-delice-des-sens .menu .menu-content li .menu-desserts li .card-content:hover .check-icon {
   width: 58px;
   opacity: 1;
@@ -753,23 +1049,176 @@ footer ul .footer-icon {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers,
-.la-note-enchantee .menu .menu-content li .menu-mains,
+.la-note-enchantee .menu .menu-content li .menu-appetizers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li:hover .card-price {
+  padding-right: 58px;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li:hover .card-price {
+  padding-right: 58px;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.la-note-enchantee .menu .menu-content li .menu-mains li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
 .la-note-enchantee .menu .menu-content li .menu-desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 2s;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li,
-.la-note-enchantee .menu .menu-content li .menu-mains li,
 .la-note-enchantee .menu .menu-content li .menu-desserts li {
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 0;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content {
   width: 100%;
   display: flex;
@@ -780,16 +1229,12 @@ footer ul .footer-icon {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-txt,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-txt,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   min-width: 0;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-txt h3,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-txt h3,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content .card-txt h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -797,8 +1242,6 @@ footer ul .footer-icon {
   font-size: 18px;
   font-weight: 500;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-txt p,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-txt p,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content .card-txt p {
   white-space: nowrap;
   overflow: hidden;
@@ -806,27 +1249,19 @@ footer ul .footer-icon {
   font-size: 15px;
   font-weight: 300;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-price,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-price,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content .card-price {
   display: flex;
   transition: all 0.3s ease-in-out;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content .card-price p,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content .card-price p,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content .card-price p {
   align-self: flex-end;
   color: #353535;
   font-weight: 700;
   white-space: nowrap;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li:hover .card-price,
-.la-note-enchantee .menu .menu-content li .menu-mains li:hover .card-price,
 .la-note-enchantee .menu .menu-content li .menu-desserts li:hover .card-price {
   padding-right: 58px;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .check-icon,
-.la-note-enchantee .menu .menu-content li .menu-mains li .check-icon,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .check-icon {
   position: absolute;
   top: 0;
@@ -843,8 +1278,6 @@ footer ul .footer-icon {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
-.la-note-enchantee .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon,
-.la-note-enchantee .menu .menu-content li .menu-mains li .card-content:hover .check-icon,
 .la-note-enchantee .menu .menu-content li .menu-desserts li .card-content:hover .check-icon {
   width: 58px;
   opacity: 1;
@@ -948,23 +1381,176 @@ footer ul .footer-icon {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers,
-.a-la-francaise .menu .menu-content li .menu-mains,
+.a-la-francaise .menu .menu-content li .menu-appetizers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li:hover .card-price {
+  padding-right: 58px;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
+.a-la-francaise .menu .menu-content li .menu-mains {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 1.2s;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-txt h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  font-weight: 300;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-price {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-price p {
+  align-self: flex-end;
+  color: #353535;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li:hover .card-price {
+  padding-right: 58px;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .check-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.a-la-francaise .menu .menu-content li .menu-mains li .card-content:hover .check-icon {
+  width: 58px;
+  opacity: 1;
+  padding: 0 19px;
+}
 .a-la-francaise .menu .menu-content li .menu-desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  opacity: 0;
+  animation: fade-in-up 0.8s ease forwards;
+  animation-delay: 2s;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li,
-.a-la-francaise .menu .menu-content li .menu-mains li,
 .a-la-francaise .menu .menu-content li .menu-desserts li {
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 0;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content {
   width: 100%;
   display: flex;
@@ -975,16 +1561,12 @@ footer ul .footer-icon {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-txt,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-txt,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
   min-width: 0;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-txt h3,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-txt h3,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content .card-txt h3 {
   white-space: nowrap;
   overflow: hidden;
@@ -992,8 +1574,6 @@ footer ul .footer-icon {
   font-size: 18px;
   font-weight: 500;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-txt p,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-txt p,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content .card-txt p {
   white-space: nowrap;
   overflow: hidden;
@@ -1001,27 +1581,19 @@ footer ul .footer-icon {
   font-size: 15px;
   font-weight: 300;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-price,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-price,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content .card-price {
   display: flex;
   transition: all 0.3s ease-in-out;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content .card-price p,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content .card-price p,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content .card-price p {
   align-self: flex-end;
   color: #353535;
   font-weight: 700;
   white-space: nowrap;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li:hover .card-price,
-.a-la-francaise .menu .menu-content li .menu-mains li:hover .card-price,
 .a-la-francaise .menu .menu-content li .menu-desserts li:hover .card-price {
   padding-right: 58px;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .check-icon,
-.a-la-francaise .menu .menu-content li .menu-mains li .check-icon,
 .a-la-francaise .menu .menu-content li .menu-desserts li .check-icon {
   position: absolute;
   top: 0;
@@ -1038,8 +1610,6 @@ footer ul .footer-icon {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
-.a-la-francaise .menu .menu-content li .menu-appetizers li .card-content:hover .check-icon,
-.a-la-francaise .menu .menu-content li .menu-mains li .card-content:hover .check-icon,
 .a-la-francaise .menu .menu-content li .menu-desserts li .card-content:hover .check-icon {
   width: 58px;
   opacity: 1;

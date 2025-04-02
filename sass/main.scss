@@ -12,6 +12,7 @@
 @use "./components/buttons";
 @use "./components/cards";
 @use "./components/loader";
+@use "./components/animations" as *;
 
 // Layout
 @use "./layout/body";
