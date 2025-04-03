@@ -1,14 +1,16 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 
 footer ul {
-  display: flex;
-  flex-direction: column;
+  @include df_column;
   gap: 7px;
   padding: 22px 25px;
   background: $color_secondary_dark;
   color: $color_white;
-
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
   li{
     img {
       height: 18px;

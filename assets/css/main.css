@@ -32,7 +32,7 @@ header .header-logo {
   padding: 16px 0;
 }
 header .header-logo img {
-  height: 30px;
+  height: 34px;
   object-fit: contain;
 }
 
@@ -43,6 +43,11 @@ footer ul {
   padding: 22px 25px;
   background: #353535;
   color: white;
+}
+@media screen and (min-width: 1024px) {
+  footer ul {
+    flex-direction: row;
+  }
 }
 footer ul li img {
   height: 18px;
@@ -82,7 +87,7 @@ footer ul .footer-icon {
   animation: spin 1s linear infinite;
 }
 .homepage .loader .ohmyfood {
-  animation: blink 1.2s ease-in-out infinite;
+  padding: 0 15px;
 }
 .homepage .page-content {
   opacity: 0;
@@ -100,14 +105,6 @@ footer ul .footer-icon {
     transform: rotate(360deg);
   }
 }
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
 @keyframes showPage {
   to {
     opacity: 1;
@@ -117,6 +114,11 @@ footer ul .footer-icon {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1490196078);
   position: relative;
   z-index: 3;
+}
+@media screen and (min-width: 1024px) {
+  .homepage header .header-logo {
+    box-shadow: none;
+  }
 }
 .homepage header .header-location {
   color: #353535;
@@ -130,20 +132,40 @@ footer ul .footer-icon {
   position: relative;
   z-index: 2;
 }
+@media screen and (min-width: 1024px) {
+  .homepage header .header-location {
+    box-shadow: none;
+  }
+}
 .homepage .hero {
   position: relative;
   z-index: 1;
   background: #F6F6F6;
-  padding: 38px 0px 56px 0;
+  padding: 38px 0 56px 0;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .homepage .hero {
+    padding: 27px 0;
+  }
 }
 .homepage .hero ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+@media screen and (min-width: 1024px) {
+  .homepage .hero ul {
+    gap: 24px;
+  }
+}
 .homepage .hero ul li h1 {
   padding: 0 39px;
+}
+@media screen and (min-width: 1024px) {
+  .homepage .hero ul li h1 {
+    font-size: 40px;
+  }
 }
 .homepage .hero ul li p {
   font-size: 18px;
@@ -169,6 +191,15 @@ footer ul .footer-icon {
 .homepage .fonctionnement {
   padding: 46px 15px 67px 27px;
 }
+@media screen and (min-width: 1024px) {
+  .homepage .fonctionnement {
+    padding: 46px 15px 51px 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
 .homepage .fonctionnement h2 {
   margin-bottom: 28px;
 }
@@ -176,6 +207,17 @@ footer ul .footer-icon {
   display: flex;
   flex-direction: column;
   gap: 22px;
+}
+@media screen and (min-width: 1024px) {
+  .homepage .fonctionnement ul {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    max-width: 1081px;
+    width: 100%;
+    padding-left: 13px;
+    padding-right: 24px;
+  }
 }
 .homepage .fonctionnement ul li {
   position: relative;
@@ -213,9 +255,15 @@ footer ul .footer-icon {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1490196078);
   cursor: pointer;
 }
+@media screen and (min-width: 1024px) {
+  .homepage .fonctionnement ul li button {
+    width: 324px;
+  }
+}
 .homepage .fonctionnement ul li button .fa-solid {
   font-size: 18px;
   transition: color 0.3s ease;
+  color: #7E7E7E;
 }
 .homepage .fonctionnement ul li button:hover .fa-mobile-screen-button,
 .homepage .fonctionnement ul li button:hover .fa-list-ul,
@@ -229,18 +277,40 @@ footer ul .footer-icon {
   flex-direction: column;
   gap: 15px;
 }
+@media screen and (min-width: 1024px) {
+  .homepage .restaurants {
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 27px 15px 30px 15px;
+  }
+}
 .homepage .restaurants h2 {
   padding-left: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .homepage .restaurants h2 {
+    padding-left: 0;
+  }
 }
 .homepage .restaurants .restaurants-cards {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
+}
+@media screen and (min-width: 1024px) {
+  .homepage .restaurants .restaurants-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    max-width: 1081px;
+    width: 100%;
+    gap: 50px 100px;
+  }
 }
 .homepage .restaurants .card {
   background: white;
   border-radius: 20px;
-  margin: 5px 0;
 }
 .homepage .restaurants .card-content {
   padding: 15px;

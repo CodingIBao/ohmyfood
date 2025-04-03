@@ -7,7 +7,6 @@
 @mixin img_card {
   background: $color_white;
   border-radius: 20px;
-  margin: 5px 0;
   &-content {
     padding: 15px;
     @include df_between;
