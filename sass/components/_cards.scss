@@ -7,11 +7,15 @@
 @mixin img_card {
   background: $color_white;
   border-radius: 20px;
+  @media screen and (min-width: 1024px) {
+    width: 490px;
+    height: 251px;
+  }
   &-content {
     padding: 15px;
-    @include df_between;
+    @include flex_between;
     .card-txt {
-      @include df_column;
+      @include flex_column;
       gap: 4px;
     }
     .card-heart {
@@ -27,7 +31,7 @@
 
 // mixin only for restaurant pages
 @mixin menu_card {
-  @include df_column;
+  @include flex_column;
   gap: 12px;
   li {
     position: relative;
@@ -36,23 +40,23 @@
     gap: 0;
     .card-content {
       width: 100%;
-      @include df_between;
+      @include flex_between;
       background: $color_white;
       padding: 12px;
       border-radius: 15px;
       box-shadow: 0 4px 15px #0000001A;
       cursor: pointer;
       .card-txt {
-        @include df_column;
+        @include flex_column;
         gap: 5px;
         min-width: 0;
         h3 {
-          @include txt-ellipsis;
+          @include txt-truncate;
           font-size: 18px;
           font-weight: 500;
         }
         p {
-          @include txt-ellipsis;
+          @include txt-truncate;
           font-size: 15px;
           font-weight: 300;
         }
@@ -75,7 +79,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      @include df_align_center;
+      @include flex_align_center;
       background-color: $color_secondary_light;
       color: $color_white;
       height: 100%;

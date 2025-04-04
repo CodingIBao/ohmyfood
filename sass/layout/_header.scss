@@ -15,7 +15,7 @@ header {
 // mixin only for restaurant pages
 @mixin header_menu {
   ul {
-    @include df_justify_center;
+    @include flex_justify_center;
     position: relative;
     li {
       .back-button {

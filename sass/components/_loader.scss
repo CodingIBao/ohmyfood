@@ -10,7 +10,7 @@
     width: 100%;
     height: 100%;
     background: $color_white;
-    @include df_justify_center;
+    @include flex_justify_center;
     flex-direction: column-reverse;
     gap: 30px;
     align-items: center;

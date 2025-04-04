@@ -1,27 +1,27 @@
 // mixin usable on all pages
 
 // flexbox
-@mixin df_column {
+@mixin flex_column {
   display: flex;
   flex-direction: column;
 }
 
-@mixin df_between {
+@mixin flex_between {
   display: flex;
   justify-content: space-between;
 }
 
-@mixin df_align_center {
+@mixin flex_align_center {
   display: flex;
   align-items: center;
 }
 
-@mixin df_justify_center {
+@mixin flex_justify_center {
   display: flex;
   justify-content: center;
 }
 
-@mixin txt-ellipsis {
+@mixin txt-truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

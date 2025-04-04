@@ -1,29 +1,69 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
-
-footer ul {
-  @include df_column;
-  gap: 7px;
-  padding: 22px 25px;
-  background: $color_secondary_dark;
-  color: $color_white;
-  @media screen and (min-width: 1024px) {
-    flex-direction: row;
-  }
-  li{
-    img {
-      height: 18px;
-      margin-bottom: 9px;
-      filter: invert(100%) brightness(100%) saturate(0%);
-      object-fit: contain;
-      width: unset;
-      cursor: pointer;
+footer {
+  .footer {
+    @include flex_column;
+    gap: 18px;
+    padding: 25px;
+    background: $color_secondary_dark;
+    color: $color_white;
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 90px;
+      padding: 68px 66px 25px 25px;
+    }
+    .footer-logo {
+      @media screen and (min-width: 1024px) {
+        margin-bottom: 4px;
+        order: 3;
+      }
+      a {
+        width: fit-content;
+        img {
+          height: 18px;
+          filter: invert(100%) brightness(100%) saturate(0%);
+          object-fit: contain;
+          width: unset; 
+        }
+      }
+    }
+    .footer-content {
+      @include flex_column;
+      gap: 7px;
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        gap: 42px;
+      }
+      .footer-links-group {
+        @include flex_column;
+        gap: 7px;
+        @media screen and (min-width: 1024px) {
+          flex-direction: row;
+        }
+        .footer-link-item {
+          @include flex_align_center;
+          gap: 12px;
+          i {
+            font-size: 12px;
+          }
+          @media screen and (min-width: 1024px) {
+            gap: 10px;
+            order: 1; 
+          }
+        }
+      }
+      .footer-legal {
+        @include flex_column;
+        gap: 7px;
+        @media screen and (min-width: 1024px) {
+          flex-direction: row;
+          align-items: center;
+          gap: 15px;
+          order: 2; 
+        }
+      }
     }
   }
-  .footer-icon {
-    display: flex;
-    gap: 12px;
-  }
-  
 }

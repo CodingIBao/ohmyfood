@@ -36,30 +36,84 @@ header .header-logo img {
   object-fit: contain;
 }
 
-footer ul {
+footer .footer {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  padding: 22px 25px;
+  gap: 18px;
+  padding: 25px;
   background: #353535;
   color: white;
 }
 @media screen and (min-width: 1024px) {
-  footer ul {
+  footer .footer {
     flex-direction: row;
+    justify-content: flex-end;
+    gap: 90px;
+    padding: 68px 66px 25px 25px;
   }
 }
-footer ul li img {
+@media screen and (min-width: 1024px) {
+  footer .footer .footer-logo {
+    margin-bottom: 4px;
+    order: 3;
+  }
+}
+footer .footer .footer-logo a {
+  width: fit-content;
+}
+footer .footer .footer-logo a img {
   height: 18px;
-  margin-bottom: 9px;
   filter: invert(100%) brightness(100%) saturate(0%);
   object-fit: contain;
   width: unset;
-  cursor: pointer;
 }
-footer ul .footer-icon {
+footer .footer .footer-content {
   display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footer-content {
+    flex-direction: row;
+    gap: 42px;
+  }
+}
+footer .footer .footer-content .footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footer-content .footer-links-group {
+    flex-direction: row;
+  }
+}
+footer .footer .footer-content .footer-links-group .footer-link-item {
+  display: flex;
+  align-items: center;
   gap: 12px;
+}
+footer .footer .footer-content .footer-links-group .footer-link-item i {
+  font-size: 12px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footer-content .footer-links-group .footer-link-item {
+    gap: 10px;
+    order: 1;
+  }
+}
+footer .footer .footer-content .footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer .footer-content .footer-legal {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    order: 2;
+  }
 }
 
 .homepage .loader {
@@ -282,7 +336,7 @@ footer ul .footer-icon {
     align-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 27px 15px 30px 15px;
+    padding: 27px 14px 30px 14px;
   }
 }
 .homepage .restaurants h2 {
@@ -300,17 +354,22 @@ footer ul .footer-icon {
 }
 @media screen and (min-width: 1024px) {
   .homepage .restaurants .restaurants-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1081px;
-    width: 100%;
-    gap: 50px 100px;
+    gap: unset;
   }
 }
 .homepage .restaurants .card {
   background: white;
   border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .homepage .restaurants .card {
+    width: 490px;
+    height: 251px;
+  }
 }
 .homepage .restaurants .card-content {
   padding: 15px;
@@ -461,7 +520,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .la-palette-du-gout .menu .menu-content li .menu-appetizers li {
   position: relative;
@@ -539,7 +598,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 .la-palette-du-gout .menu .menu-content li .menu-mains li {
   position: relative;
@@ -617,7 +676,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .la-palette-du-gout .menu .menu-content li .menu-desserts li {
   position: relative;
@@ -793,7 +852,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .le-delice-des-sens .menu .menu-content li .menu-appetizers li {
   position: relative;
@@ -871,7 +930,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 .le-delice-des-sens .menu .menu-content li .menu-mains li {
   position: relative;
@@ -949,7 +1008,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .le-delice-des-sens .menu .menu-content li .menu-desserts li {
   position: relative;
@@ -1125,7 +1184,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .la-note-enchantee .menu .menu-content li .menu-appetizers li {
   position: relative;
@@ -1203,7 +1262,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 .la-note-enchantee .menu .menu-content li .menu-mains li {
   position: relative;
@@ -1281,7 +1340,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .la-note-enchantee .menu .menu-content li .menu-desserts li {
   position: relative;
@@ -1457,7 +1516,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .a-la-francaise .menu .menu-content li .menu-appetizers li {
   position: relative;
@@ -1535,7 +1594,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 .a-la-francaise .menu .menu-content li .menu-mains li {
   position: relative;
@@ -1613,7 +1672,7 @@ footer ul .footer-icon {
   gap: 12px;
   opacity: 0;
   animation: fade-in-up 0.8s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .a-la-francaise .menu .menu-content li .menu-desserts li {
   position: relative;
