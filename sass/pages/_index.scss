@@ -152,18 +152,19 @@
       @include flex_column;
       gap: 18px;
       @media screen and (min-width: 1024px) {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: unset;
+        gap: 50px;
         max-width: 1080px;
         width: 100%;
         margin: 0 auto;
       }
-      .restaurants-row {
+      .restaurants-header,
+      .restaurants-footer, {
         @include flex_column;
         gap: 18px;
         @media screen and (min-width: 1024px) {
-          gap: 50px;
+          @include flex-row;
+          justify-content: space-between;
+          gap: unset;
         }
         .card {
           @include img_card;

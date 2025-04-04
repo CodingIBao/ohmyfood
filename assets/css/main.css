@@ -355,90 +355,110 @@ footer .footer .footer-content .footer-legal {
 }
 @media screen and (min-width: 1024px) {
   .homepage .restaurants .restaurants-cards {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: unset;
+    gap: 50px;
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
   }
 }
-.homepage .restaurants .restaurants-cards .restaurants-row {
+.homepage .restaurants .restaurants-cards .restaurants-header,
+.homepage .restaurants .restaurants-cards .restaurants-footer {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 @media screen and (min-width: 1024px) {
-  .homepage .restaurants .restaurants-cards .restaurants-row {
-    gap: 50px;
+  .homepage .restaurants .restaurants-cards .restaurants-header,
+  .homepage .restaurants .restaurants-cards .restaurants-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
   }
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card {
+.homepage .restaurants .restaurants-cards .restaurants-header .card,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card {
   background: white;
   border-radius: 20px;
 }
 @media screen and (min-width: 1024px) {
-  .homepage .restaurants .restaurants-cards .restaurants-row .card {
+  .homepage .restaurants .restaurants-cards .restaurants-header .card,
+  .homepage .restaurants .restaurants-cards .restaurants-footer .card {
     width: 490px;
     height: 251px;
   }
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content {
   padding: 15px;
   display: flex;
   justify-content: space-between;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-txt {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-txt,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-txt {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-heart {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-heart,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-heart {
   position: relative;
   width: 22px;
   height: 22px;
   margin-top: 7px;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-heart .fa-regular,
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-heart .fa-solid {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-heart .fa-regular,
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-heart .fa-solid,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-heart .fa-regular,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-heart .fa-solid {
   cursor: pointer;
   font-size: 22px;
   transition: opacity 0.3s ease;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-heart .fa-solid {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-heart .fa-solid,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-heart .fa-solid {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-heart:hover .fa-solid {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-heart:hover .fa-solid,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-heart:hover .fa-solid {
   opacity: 1;
   background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card-content .card-heart:hover .fa-regular {
+.homepage .restaurants .restaurants-cards .restaurants-header .card-content .card-heart:hover .fa-regular,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card-content .card-heart:hover .fa-regular {
   opacity: 0;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card img {
+.homepage .restaurants .restaurants-cards .restaurants-header .card img,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card img {
   height: 175px;
   border-radius: 15px 15px 0 0;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card #img1 {
+.homepage .restaurants .restaurants-cards .restaurants-header .card #img1,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card #img1 {
   object-position: center bottom;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card #img2 {
+.homepage .restaurants .restaurants-cards .restaurants-header .card #img2,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card #img2 {
   object-position: center 61%;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card #img4,
-.homepage .restaurants .restaurants-cards .restaurants-row .card #img3 {
+.homepage .restaurants .restaurants-cards .restaurants-header .card #img4,
+.homepage .restaurants .restaurants-cards .restaurants-header .card #img3,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card #img4,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card #img3 {
   object-position: center bottom;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card .image-container {
+.homepage .restaurants .restaurants-cards .restaurants-header .card .image-container,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card .image-container {
   position: relative;
 }
-.homepage .restaurants .restaurants-cards .restaurants-row .card .image-container .badge {
+.homepage .restaurants .restaurants-cards .restaurants-header .card .image-container .badge,
+.homepage .restaurants .restaurants-cards .restaurants-footer .card .image-container .badge {
   position: absolute;
   top: 10px;
   right: 10px;

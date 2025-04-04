@@ -1,6 +1,11 @@
 // mixin usable on all pages
 
 // flexbox
+@mixin flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
 @mixin flex_column {
   display: flex;
   flex-direction: column;
