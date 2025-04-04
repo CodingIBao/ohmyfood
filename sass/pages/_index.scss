@@ -136,8 +136,6 @@
     @include flex_column;
     gap: 15px;
     @media screen and (min-width: 1024px) {
-      align-content: center;
-      flex-wrap: wrap;
       gap: 20px;
       padding: 27px 14px 30px 14px;
     }
@@ -145,6 +143,9 @@
       padding-left: 5px;
       @media screen and (min-width: 1024px) {
         padding-left: 0;
+        max-width: 1080px;
+        width: 100%;
+        margin: 0 auto;
       }
     }    
     .restaurants-cards {
@@ -152,28 +153,36 @@
       gap: 18px;
       @media screen and (min-width: 1024px) {
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 1081px;
         gap: unset;
+        max-width: 1080px;
+        width: 100%;
+        margin: 0 auto;
       }
-    }
-    .card {
-      @include img_card;
-      #img1 {
-        object-position: center bottom;
-      }
-      #img2 {
-        object-position: center 61%;
-      }
-      #img4,
-      #img3 {
-        object-position: center bottom;
-      }
-      .image-container {
-        position: relative;
-        .badge {
-          @include btn_badge;
+      .restaurants-row {
+        @include flex_column;
+        gap: 18px;
+        @media screen and (min-width: 1024px) {
+          gap: 50px;
+        }
+        .card {
+          @include img_card;
+          #img1 {
+            object-position: center bottom;
+          }
+          #img2 {
+            object-position: center 61%;
+          }
+          #img4,
+          #img3 {
+            object-position: center bottom;
+          }
+          .image-container {
+            position: relative;
+            .badge {
+              @include btn_badge;
+            }
+          }
         }
       }
     }  
