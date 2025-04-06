@@ -158,7 +158,7 @@
         margin: 0 auto;
       }
       .restaurants-header,
-      .restaurants-footer, {
+      .restaurants-footer {
         @include flex_column;
         gap: 18px;
         @media screen and (min-width: 1024px) {
@@ -166,22 +166,27 @@
           justify-content: space-between;
           gap: unset;
         }
-        .card {
-          @include img_card;
-          #img1 {
-            object-position: center bottom;
+        a {
+          @media screen and (min-width: 1024px) {
+            width: 45.4%;
           }
-          #img2 {
-            object-position: center 61%;
-          }
-          #img4,
-          #img3 {
-            object-position: center bottom;
-          }
-          .image-container {
-            position: relative;
-            .badge {
-              @include btn_badge;
+          .card {
+            @include img_card;
+            #img1 {
+              object-position: center bottom;
+            }
+            #img2 {
+              object-position: center 61%;
+            }
+            #img4,
+            #img3 {
+              object-position: center bottom;
+            }
+            .image-container {
+              position: relative;
+              .badge {
+                @include btn_badge;
+              }
             }
           }
         }

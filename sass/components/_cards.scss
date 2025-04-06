@@ -5,12 +5,9 @@
 
 // mixin only for index page
 @mixin img_card {
+  height: 100%;
   background: $color_white;
   border-radius: 20px;
-  @media screen and (min-width: 1024px) {
-    width: 490px;
-    height: 251px;
-  }
   &-content {
     padding: 15px;
     @include flex_between;
@@ -25,6 +22,7 @@
   }
   img {
     height: 175px;
+    width: 100%;
     border-radius: 15px 15px 0 0;
   }
 }
