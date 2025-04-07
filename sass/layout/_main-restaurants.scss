@@ -6,51 +6,62 @@
 
 
 @mixin main_menu {
-  position: relative;
-  margin-top: -40px;
-  background: $color_background_light;
-  padding: 34px 12px 12px 12px;
-  border-radius: 40px 40px 0 0;
-  .menu-title {
-    padding: 0 28px 0 0;
-    @include flex_between;
-    align-items: center;
-    .card-heart {
-      @include heart_button;
+  .menu {
+    position: relative;
+    margin-top: -40px;
+    background: $color_background_light;
+    padding: 34px 12px 12px 12px;
+    border-radius: 40px 40px 0 0;
+    @media screen and (min-width: 1024px) {
+      max-width: 1055px;
+      margin: -40px auto 0 auto;
+      padding: 60px 208px 12px 208px;
     }
-    h1 {
-      font-weight: 400;
-      font-size: 28px;
-      font-family: "Shrikhand", sans-serif;
-    }
-  }
-  .menu-content {
-    li {
-      @include flex_column; gap: 12px;
-      h2 {
-        padding-bottom: 4px;
-        margin-top: 42px;
-        font-weight: 300;
-        font-size: 16px;
-        text-transform: uppercase;
-        border-bottom: 3px solid $color_secondary_light;
-        width: 40px;
+    .menu-title {
+      padding: 0 28px 0 0;
+      @include flex_between;
+      align-items: center;
+      .card-heart {
+        @include heart_button;
       }
-      .menu-appetizers {
-        @include menu_card;
-        @include fade_in_step(0.2s);
+      h1 {
+        font-weight: 400;
+        font-size: 28px;
+        font-family: "Shrikhand", sans-serif;
       }
-      .menu-mains {
-        @include menu_card;
-        @include fade_in_step(0.6s);
-      }
-      .menu-desserts {
-        @include menu_card;
-        @include fade_in_step(1.5s);
+      @media screen and (min-width: 1024px) {
+        justify-content: center;
+        gap: 22px;
       }
     }
-  }
-  .menu-cta {
-    @include cta_menu_gradient;
+    .menu-content {
+      li {
+        @include flex_column; gap: 12px;
+        h2 {
+          padding-bottom: 4px;
+          margin-top: 42px;
+          font-weight: 300;
+          font-size: 16px;
+          text-transform: uppercase;
+          border-bottom: 3px solid $color_secondary_light;
+          width: 40px;
+        }
+        .menu-appetizers {
+          @include menu_card;
+          @include fade_in_step(0.2s);
+        }
+        .menu-mains {
+          @include menu_card;
+          @include fade_in_step(0.6s);
+        }
+        .menu-desserts {
+          @include menu_card;
+          @include fade_in_step(1.5s);
+        }
+      }
+    }
+    .menu-cta {
+      @include cta_menu_gradient;
+    }
   }
 }

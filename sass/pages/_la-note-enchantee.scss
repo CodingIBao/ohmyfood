@@ -7,7 +7,7 @@
   header {
     @include header_menu;
   }
-  .menu {
-    @include main_menu;
+  main {
+    @include main_menu;  
   }
 }

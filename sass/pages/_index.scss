@@ -186,13 +186,27 @@
             @include img_card;
             #img1 {
               object-position: center bottom;
+              @media screen and (min-width: 1024px) {
+                object-position: center 66%;
+              }
             }
             #img2 {
               object-position: center 61%;
+              @media screen and (min-width: 1024px) {
+                object-position: center 56%;
+              }
             }
-            #img4,
             #img3 {
               object-position: center bottom;
+              @media screen and (min-width: 1024px) {
+                object-position: center 70%;
+              }
+            }
+            #img4 {
+              object-position: center bottom;
+              @media screen and (min-width: 1024px) {
+                object-position: center 66%;
+              }
             }
             .image-container {
               position: relative;
